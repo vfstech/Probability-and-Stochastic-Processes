@@ -1,0 +1,171 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{array}
+
+\graphicspath{ {./images/} }
+
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+
+\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+ 
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\let\vec\mathbf
+
+\vspace{3cm}
+\title{
+
+Probability Assignment - I
+
+}
+\author{ Vaibhav Falgun Shah (AI23MTECH02007)$^{}$
+} 
+
+\maketitle
+\newpage
+
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\noindent\textbf{Question:}
+\\ \\
+Two dice are thrown simultaneously. If X denotes the number of sixes, find the expectation of X.
+\\ \\
+\noindent\textbf{Solution:}
+\\ \\
+Let X denote the random variable representing numer of sixes.
+\\
+Number of sixes when rolling two dice can be 0, 1 or 2.
+\\
+
+\noindent Hence, Sample space of X = \{0, 1, 2\} 
+\\ \\
+Expectation of X can be defined as:
+\[ E(X) = 0 \cdot P(X=0) + 1 \cdot P(X=1) + 2 \cdot P(X=2)\]
+\\
+Now we have to find P(X=0), P(X=1) and P(X=2).
+\\ \\
+\noindent Let $p$ be the probability of getting a six on a single die, and $q$ be the probability of not getting a six on a single die.
+\\
+\noindent Since each die has 6 possible outcomes and only one of them is a six, we have $p = \frac{1}{6}$ and $q = 1 - p = \frac{5}{6}$.
+\\ \\
+\noindent We have two independent dice rolls, so the probability of getting no sixes, $P(X = 0)$, is $q^2$
+\[ P(X = 0) = q \cdot q =  \left(\frac{5}{6}\right)^2 = \frac{25}{36} \]
+
+\noindent We can get exactly one 6 in two ways: either we get six on first die and not on second, or we get six on second die and not on fist. So $P(X = 1)$ can be written as:
+\[ P(X = 1) = (p \cdot q) + (q \cdot p) = 2 \cdot (p \cdot q) = 2 \cdot \left(\frac{1}{6} \cdot \frac{5}{6}\right) = \frac{10}{36} \]
+
+\noindent The probability of getting two sixes, $P(X = 2)$, is $p^2$ since we have two independent dice:
+\[ P(X = 2) = p \cdot p = \left(\frac{1}{6}\right)^2 = \frac{1}{36} \]
+
+\noindent Now we have all 3 probabilities required to calculate the expectation:
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    X & P(X) \\
+    \hline
+    \hline
+    0 & $P(X = 0) = \dfrac{25}{36}$ \\
+    \hline
+    1 & $P(X = 1) = \dfrac{10}{36}$ \\
+    \hline
+    2 & $P(X = 2) = \dfrac{1}{36}$ \\
+    \hline
+
+    \end{tabular}
+    %\caption{probabilities of X}
+    \end{table}
+
+
+\noindent Substituting these values back into the expectation formula:
+\[ E(X) = 0 \cdot \left(\frac{25}{36}\right) + 1 \cdot \left(\frac{10}{36}\right) + 2 \cdot \left(\frac{1}{36}\right) = \frac{12}{36} = \frac{1}{3} \]
+
+Therefore, the expectation of X is ${\dfrac{1}{3}}$
+
+\end{document}
