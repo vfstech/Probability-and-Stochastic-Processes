@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.5.16)  17 MAY 2023 19:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.5.16)  19 MAY 2023 00:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,8 +1072,7 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-)
-No file assignment1.aux.
+) (./assignment1.aux)
 \openout1 = `assignment1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 48.
@@ -1190,6 +1189,8 @@ LaTeX Info: Redefining \ohm on input line 48.
 Package gensymb Info: Using \textohm for \ohm on input line 48.
 Package gensymb Info: Using \textmu for \micro on input line 48.
 Package hyperref Info: Link coloring OFF on input line 48.
+
+(./assignment1.out) (./assignment1.out)
 \@outlinefile=\write4
 \openout4 = `assignment1.out'.
 
@@ -1230,74 +1231,73 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 1
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 114--124
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--124
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--124
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--124
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+txr on input line 1
-25.
+31.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 125.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 131.
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--137
+Underfull \hbox (badness 10000) in paragraph at lines 131--134
 
  []
 
 
-Underfull \hbox (badness 2073) in paragraph at lines 128--137
+Underfull \hbox (badness 10000) in paragraph at lines 134--141
+
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 134--141
 \OT1/txr/m/n/12 Since each die has 6 pos-si-ble out-comes and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--137
-
- []
-
-
-Underfull \hbox (badness 2837) in paragraph at lines 128--137
-\OT1/txr/m/n/12 We have two in-de-pen-dent dice rolls, so the
+Overfull \hbox (14.79446pt too wide) in paragraph at lines 144--152
+ [][] 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ] (./assignment1.aux)
-
-Package rerunfilecheck Warning: File `assignment1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `assignment1.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `assignment1.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30015 strings out of 476091
- 591458 string characters out of 5794081
- 1867330 words of memory out of 5000000
+ 30021 strings out of 476091
+ 591554 string characters out of 5794081
+ 1870330 words of memory out of 5000000
  49773 multiletter control sequences out of 15000+600000
  586712 words of font info for 198 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1308,7 +1308,7 @@ e/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist
 /public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on assignment1.pdf (1 page, 42797 bytes).
+Output written on assignment1.pdf (1 page, 43260 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream

@@ -113,10 +113,16 @@ Probability Assignment - I
 
 \noindent\textbf{Question:}
 \\ \\
+
 Two dice are thrown simultaneously. If X denotes the number of sixes, find the expectation of X.
 \\ \\
 \noindent\textbf{Solution:}
 \\ \\
+
+%Let $D_1$ be the outcome of the first die roll, and $D_2$ be the outcome of the second die roll (both ranging from 1 to 6)\\
+%$D_1 =$ \{1,2,3,4,5,6\} \\
+%$D_2 =$ \{1,2,3,4,5,6\} \\
+
 Let X denote the random variable representing numer of sixes.
 \\
 Number of sixes when rolling two dice can be 0, 1 or 2.
@@ -132,11 +138,24 @@ Now we have to find P(X=0), P(X=1) and P(X=2).
 \noindent Let $p$ be the probability of getting a six on a single die, and $q$ be the probability of not getting a six on a single die.
 \\
 \noindent Since each die has 6 possible outcomes and only one of them is a six, we have $p = \frac{1}{6}$ and $q = 1 - p = \frac{5}{6}$.
-\\ \\
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Parameter & Description & Value \\
+\hline
+$p$ & Probability of getting a six on a single die & $\dfrac{1}{6}$ \\
+$q$ & Probability of not getting a six on a single die & $\dfrac{5}{6}$ \\
+\hline
+\end{tabular}
+
+\end{table}
+
 \noindent We have two independent dice rolls, so the probability of getting no sixes, $P(X = 0)$, is $q^2$
 \[ P(X = 0) = q \cdot q =  \left(\frac{5}{6}\right)^2 = \frac{25}{36} \]
 
-\noindent We can get exactly one 6 in two ways: either we get six on first die and not on second, or we get six on second die and not on fist. So $P(X = 1)$ can be written as:
+\noindent We can get exactly one 6 in two ways: either we get six on first die and not on second, or we get six on second die and not on the first. So $P(X = 1)$ can be written as:
 \[ P(X = 1) = (p \cdot q) + (q \cdot p) = 2 \cdot (p \cdot q) = 2 \cdot \left(\frac{1}{6} \cdot \frac{5}{6}\right) = \frac{10}{36} \]
 
 \noindent The probability of getting two sixes, $P(X = 2)$, is $p^2$ since we have two independent dice:
@@ -145,22 +164,22 @@ Now we have to find P(X=0), P(X=1) and P(X=2).
 \noindent Now we have all 3 probabilities required to calculate the expectation:
 
 \begin{table}[!htbp]
-    \centering
-    \begin{tabular}{|c|c|}
-    \hline
-    X & P(X) \\
-    \hline
-    \hline
-    0 & $P(X = 0) = \dfrac{25}{36}$ \\
-    \hline
-    1 & $P(X = 1) = \dfrac{10}{36}$ \\
-    \hline
-    2 & $P(X = 2) = \dfrac{1}{36}$ \\
-    \hline
+\centering
+\begin{tabular}{|c|c|}
+\hline
+X & P(X) \\
+\hline
+\hline
+0 & $P(X = 0) = \dfrac{25}{36}$ \\
+\hline
+1 & $P(X = 1) = \dfrac{10}{36}$ \\
+\hline
+2 & $P(X = 2) = \dfrac{1}{36}$ \\
+\hline
 
-    \end{tabular}
-    %\caption{probabilities of X}
-    \end{table}
+\end{tabular}
+%\caption{probabilities of X}
+\end{table}
 
 
 \noindent Substituting these values back into the expectation formula:
