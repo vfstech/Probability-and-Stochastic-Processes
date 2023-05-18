@@ -1,0 +1,221 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{array}
+\usepackage{mdframed}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\graphicspath{ {./images/} }
+
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+
+% Define code style
+\lstdefinestyle{mystyle}{
+    language=Python,
+    backgroundcolor=\color{black},
+    basicstyle=\color{white}\ttfamily\footnotesize,
+    keywordstyle=\color{purple},
+    stringstyle=\color{orange},
+    commentstyle=\color{gray},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4
+}
+
+% Define code environment with black background
+\mdfdefinestyle{codebox}{
+    backgroundcolor=black,
+    linecolor=black,
+    linewidth=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=3pt,
+    innertopmargin=3pt,
+    innerbottommargin=3pt
+}
+
+\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+ 
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\let\vec\mathbf
+
+\vspace{3cm}
+\title{
+
+Probability Software Assignment
+
+}
+\author{ Vaibhav Falgun Shah (AI23MTECH02007)$^{}$
+} 
+
+\maketitle
+
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{Introduction}
+Task is to implement a video player with a randomized playlist.\\
+We have few songs as video files. We want to play them randomly such that songs start repeating only after entire playlist is played once.
+
+\section{Code Overview}
+
+\subsection{Importing Libraries}
+We import necessary libraries: vlc, os, sys, numpy, and pynput first.
+\begin{itemize}
+\item vlc library is used to play the videos.
+\item os is required to get the list of files to be played
+\item sys library is used to exit the application
+\item numpy is used to generate random array
+\item pynput is used to receive input from keyboard
+\end{itemize}
+
+
+\subsection{Initializing Variables}
+We iterate throuh all files in the folder and take files with .mp4 extension.\\
+A media object is created for each mp4 file in folder, and a list \underline{media} is created to store media objects for each video file in the specified folder.
+An instance of vlc.Instance() is created to manage the VLC player, and the \underline{player} object is created using the instance.media\_player\_new() method.
+
+\subsection{Playing Videos}
+A randomly ordered numpy array is generated for the videos using numpy's arange and shuffle functions. The first video from the random order is selected, and the corresponding media object is set as the current media in the player. The player is then played.
+
+\subsection{Changing Songs}
+The \underline{play\_next} function is defined to pause the player, pop an item from the random list, and play the song on that index on media list.\\
+If the random list is empty, it creates a new list by suffling the numpy array again
+
+\subsection{Event Handling}
+The \underline{on\_key\_press} function is defined to handle keyboard events. If the space key is pressed, the \underline{play\_next} function is called to switch to a new video. If the \underline{q} key is pressed, the player is stopped, and the program is exited using sys.exit().\\
+The \underline{video\_end\_handle} function is defined to handle the MediaPlayerEndReached event, which occurs when a video finishes playing. The \underline{play\_next} function is called. The event is attached to the player's event manager.
+
+\subsection{Keyboard Listener}
+An instance of the keyboard.Listener class is created with the \underline{on\_key\_press} function. The listener is started to monitor keyboard events.
+
+\subsection{Program Execution}
+The code enters an infinite loop to keep the program running. The loop is required to receive and handle keyboard events and to keep the player running.
+
+
+\section{Intructions for use}
+
+Install necessary python packages:
+
+\begin{mdframed}[style=codebox]
+\lstset{style=mystyle}
+\begin{lstlisting}[language=Python]
+    pip install python-vlc
+    pip install pynput
+\end{lstlisting}
+\end{mdframed}
+
+Change the path in code to appropriate path for videos
+
+\begin{mdframed}[style=codebox]
+\lstset{style=mystyle}
+\begin{lstlisting}[language=Python]
+    folder_path = '/home/vaibhav/Downloads'
+\end{lstlisting}
+\end{mdframed}
+
+Run the file
+
+
+\begin{mdframed}[style=codebox]
+\lstset{style=mystyle}
+\begin{lstlisting}[language=Python]
+    python3 software_assignment.py
+\end{lstlisting}
+\end{mdframed}
+
+\end{document}
